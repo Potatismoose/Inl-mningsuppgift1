@@ -6,7 +6,7 @@ namespace Inlämningsuppgift1
     {
         static void Main(string[] args)
         {
-           
+            Console.Title = "Inlämmningsuppgift 1";
         }
     }
 }
