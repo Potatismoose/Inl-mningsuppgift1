@@ -51,6 +51,7 @@ namespace Inlämningsuppgift1
                     if (inputOperator[1] == '*')
                         sum.Add(inputNumber[0] + inputNumber[1] * inputNumber[2]);
                     if (inputOperator[1] == '/')
+                    {
                         if (inputNumber[2] == 0)
                         {
                             Console.WriteLine("Du kan inte dela med 0");
@@ -58,8 +59,74 @@ namespace Inlämningsuppgift1
                         }
                         else
                             sum.Add(inputNumber[0] + inputNumber[1] / inputNumber[2]);
+                    }
                 }
-                
+
+                if (inputOperator[0] == '-')
+                {
+                    if (inputOperator[1] == '+')
+                        sum.Add(inputNumber[0] - inputNumber[1] + inputNumber[2]);
+                    if (inputOperator[1] == '-')
+                        sum.Add(inputNumber[0] - inputNumber[1] - inputNumber[2]);
+                    if (inputOperator[1] == '*')
+                        sum.Add(inputNumber[0] - inputNumber[1] * inputNumber[2]);
+                    if (inputOperator[1] == '/')
+                    {
+                        if (inputNumber[2] == 0)
+                        {
+                            Console.WriteLine("Du kan inte dela med 0");
+                            error = true;
+                        }
+                        else
+                            sum.Add(inputNumber[0] - inputNumber[1] / inputNumber[2]);
+                    }
+                }
+
+                if (inputOperator[0] == '*')
+                {
+                    if (inputOperator[1] == '+')
+                        sum.Add(inputNumber[0] * inputNumber[1] + inputNumber[2]);
+                    if (inputOperator[1] == '-')
+                        sum.Add(inputNumber[0] * inputNumber[1] - inputNumber[2]);
+                    if (inputOperator[1] == '*')
+                        sum.Add(inputNumber[0] * inputNumber[1] * inputNumber[2]);
+                    if (inputOperator[1] == '/')
+                    {
+                        if (inputNumber[2] == 0)
+                        {
+                            Console.WriteLine("Du kan inte dela med 0");
+                            error = true;
+                        }
+                        else
+                            sum.Add(inputNumber[0] * inputNumber[1] / inputNumber[2]);
+                    }
+                }
+
+                if (inputOperator[0] == '/')
+                {
+                    if (inputNumber[1] != 0)
+                    {
+                        if (inputOperator[1] == '+')
+                            sum.Add(inputNumber[0] / inputNumber[1] + inputNumber[2]);
+                        if (inputOperator[1] == '-')
+                            sum.Add(inputNumber[0] / inputNumber[1] - inputNumber[2]);
+                        if (inputOperator[1] == '*')
+                            sum.Add(inputNumber[0] / inputNumber[1] * inputNumber[2]);
+                        if (inputOperator[1] == '/')
+                        {
+                            if (inputNumber[2] == 0)
+                            {
+                                Console.WriteLine("Du kan inte dela med 0");
+                                error = true;
+                            }
+                            else
+                                sum.Add(inputNumber[0] / inputNumber[1] / inputNumber[2]);
+                        }
+                    }
+                    else
+                        Console.WriteLine("Du kan inte dela med 0");
+                }
+
                 if (!error)
                 {
                     int counter = sum.Count - 1;
