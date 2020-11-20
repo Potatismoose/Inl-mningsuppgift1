@@ -131,8 +131,15 @@ namespace Inlämningsuppgift1
                 {
                     int counter = sum.Count - 1;
                     Console.Write("{0}{1}{2}{3}{4} = {5}", inputNumber[0], inputOperator[0], inputNumber[1], inputOperator[1], inputNumber[2], sum[counter]);
-                Console.WriteLine();
-                Console.ReadKey();
+                    Console.WriteLine();
+                    if(sum[counter] < 100)
+                        Console.WriteLine("Less then a hundred");
+                    else if (sum[counter] > 100)
+                        Console.WriteLine("More then a hundred");
+                    else
+                        Console.WriteLine("Cool, now you have a hundred, clap clap");
+
+                    Console.ReadKey();
                 }
                 
                 error = false;
