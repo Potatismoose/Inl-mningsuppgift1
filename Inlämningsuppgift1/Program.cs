@@ -9,7 +9,7 @@ namespace Inlämningsuppgift1
         {
 
             List<char> inputOperator = new List<char>();
-            List<int> inputNumber = new List<int>();
+            List<double> inputNumber = new List<double>();
             List<double> sum = new List<double>();
             bool quit = false;
 
