@@ -143,6 +143,7 @@ namespace Inlämningsuppgift1
                 //Om inget fel funnet så skrivs talet och beräkningen ut
                 if (!error)
                 {
+                    
                     int counter = sum.Count - 1;
                     Console.Write("{0}{1}{2}{3}{4} = {5}", inputNumber[0], inputOperator[0], inputNumber[1], inputOperator[1], inputNumber[2], sum[counter]);
                     Console.WriteLine();
@@ -192,6 +193,15 @@ namespace Inlämningsuppgift1
             }
             
             Console.WriteLine("\nDen totala summan av alla uträkningar blev: {0}", summa);
+            //Ifsats som kontrollerar om talet är 100, mindre än 100 eller mer än 100 och skriver ut meddelandet
+            if (summa < 100)
+                Console.WriteLine("Less then a hundred");
+            else if (summa > 100)
+                Console.WriteLine("More then a hundred");
+            else
+                Console.WriteLine("Cool, now you have a hundred, clap clap");
+
+            
             Console.ReadKey();
 
         }
